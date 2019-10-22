@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>Document</title></head><body></body><div class="all"><div class="title"><p>Calculator</p></div><form><p>Value 1: <input id="value1" type="text"/></p><p>Value 2:<input id="value2" type="text"/></p>Operator:<select id="operator"><option value="add">add</option><option value="min">Minus</option><option value="div">Divide</option><option value="mul">Multiply</option></select><button type="button" onclick="calc()">Calculate</button></form><div id="result"></div></div><script>function calc() {
+    var vf = parseInt(+document.querySelector('#value1').value);
+    var vs = parseInt(+document.querySelector("#value2").value);
+    var op = document.querySelector("#operator").value;
+    var calculate;
+
+    if (op == 'add') {
+        calculate = vf + vs;
+    } else if (op == 'min') {
+        calculate = vf - vs;
+    } else if (op == 'div' ) {
+        calculate = vf / vs;
+    } else if (op == 'mul') {
+        calculate = vf * vs;
+    }
+    document.querySelector("#result").innerHTML = calculate;
+}</script><link rel="stylesheet" href="/pug-starterstyle.css"/></html>
