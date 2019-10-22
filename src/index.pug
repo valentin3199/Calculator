@@ -6,21 +6,21 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
     body
+    .all
+        .title
+            p Calculator
         form
-            #value1
-                p Value 1
-                    input(type="text")
-            #value2
-                p Value 2
-                    input(type="text")
-            p Operator:
-            #operator
-                select
-                    option(value="add") Add
-                    option(value="min") Minus
-                    option(value="div") Divide
-                    option(value="mul") Multiply
-                button(type="button" onclick="calc()") Calculate
+            p Value 1: 
+                input#value1(type='text')
+            p Value 2:
+                input#value2(type='text')
+            | Operator:
+            select#operator
+                option(value='add') add
+                option(value='min') Minus
+                option(value='div') Divide
+                option(value='mul') Multiply
+            button(type='button' onclick='calc()') Calculate
         #result
     script
         include main.js

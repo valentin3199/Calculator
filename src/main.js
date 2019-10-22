@@ -1,6 +1,6 @@
 function calc() {
-    var vf = parseInt(document.querySelector("#value1").value);
-    var vs = parseInt(document.querySelector("#value2").value);
+    var vf = parseInt(+document.querySelector('#value1').value);
+    var vs = parseInt(+document.querySelector("#value2").value);
     var op = document.querySelector("#operator").value;
     var calculate;
 
@@ -13,7 +13,5 @@ function calc() {
     } else if (op == 'mul') {
         calculate = vf * vs;
     }
-     console.log(vs);
-     console.log(vf);
-   // document.querySelector("#result").innerHTML = calculate;
+    document.querySelector("#result").innerHTML = calculate;
 }
