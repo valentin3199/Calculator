@@ -6,3 +6,23 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
     body
+        form
+            #value1
+                p Value 1
+                    input(type="text")
+            #value2
+                p Value 2
+                    input(type="text")
+            p Operator:
+            #operator
+                select
+                    option(value="add") Add
+                    option(value="min") Minus
+                    option(value="div") Divide
+                    option(value="mul") Multiply
+                button(type="button" onclick="calc()") Calculate
+        #result
+    script
+        include main.js
+    if config.entry.css.external
+        link(rel="stylesheet", href=`${baseUrl}style.css`)
